@@ -42,7 +42,7 @@ if (isset($_POST['submit_payment'])) {
 }
 
 // Get the latest unpaid appointment for the patient
-$sql = "SELECT a.*, d.nama_dokter, d.spesialisasi, d.biaya_kosultas 
+$sql = "SELECT a.*, d.nama_dokter, d.spesialisasi, d.biaya_konsultasi 
         FROM appointment a
         JOIN dokter d ON a.id_dokter = d.id_dokter
         WHERE a.id_pasien = ? AND a.status = 0

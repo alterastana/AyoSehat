@@ -128,6 +128,34 @@ if (isset($_POST['logout'])) {
             transform: translateY(-2px);
             box-shadow: 0 4px 12px -2px rgba(239, 68, 68, 0.3);
         }
+        /* Styling untuk tabel */
+        .styled-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 25px 0;
+            font-size: 18px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+
+        .styled-table th, .styled-table td {
+            padding: 12px 15px;
+        }
+
+        .styled-table th {
+            background-color: #009879;
+            color: #ffffff;
+            text-align: center;
+        }
+
+        .styled-table tr:nth-child(even) {
+            background-color: #f3f3f3;
+        }
+
+        .styled-table tr:hover {
+            background-color: #f1f1f1;
+        }
+        
     </style>
 </head>
 <body class="bg-secondary-100 min-h-screen flex flex-col font-sans antialiased">
