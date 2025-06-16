@@ -24,7 +24,6 @@ $stmt->close();
 </head>
 <body>
     <?php include "layout/header.html" ?>
-    <h2>Data Jadwal</h2>
     <table border = 1>
         <tr>
             <th>ID</th>
