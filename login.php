@@ -17,7 +17,7 @@ if (isset($_POST['login'])) {
     $password = $_POST['password'];
 
     $hash_password = hash("md5", $password);
-    $sql = "SELECT * FROM pasien WHERE username=? AND password=?";
+    $sql = "SELECT id_pasien, username FROM pasien WHERE username=? AND password=?";
     $stmt = $db->prepare($sql);
     $stmt->bind_param("ss", $username, $hash_password);
     $stmt->execute();
@@ -25,8 +25,12 @@ if (isset($_POST['login'])) {
 
     if ($result->num_rows > 0) {
         $data = $result->fetch_assoc();
-        $_SESSION["username"] = $data["username"];
         $_SESSION["is_login"] = true;
+        $_SESSION["username"] = $data["username"];
+        $_SESSION["id_pasien"] = $data["id_pasien"];
+        echo '<pre>';
+        print_r($_SESSION);
+        echo '</pre>';
         header("location: dashboard.php");
         exit();
     } else {
