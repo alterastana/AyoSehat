@@ -35,8 +35,8 @@ $stmt->close();
         </tr>
         <?php while($row = $result->fetch_assoc()): ?>
         <tr>
-        <td><?= $row['id']; ?></td>
-            <td><?= $row['nama']; ?></td>
+        <td><?= $row['id_dokter']; ?></td>
+            <td><?= $row['nama_dokter']; ?></td>
             <td><?= $row['spesialisasi']; ?></td>
             <td><?= $row['biaya_konsultasi']; ?></td>
             <td><?= $row['jadwal']; ?></td>
