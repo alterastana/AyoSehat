@@ -1,0 +1,10 @@
+{
+    "autoload": {
+        "psr-4": {
+            "App\\": "graphql/"
+        }
+    },
+    "require": {
+        "webonyx/graphql-php": "^15.0"
+    }
+}
